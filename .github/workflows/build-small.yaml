@@ -18,7 +18,6 @@ defaults:
     shell: bash
 jobs:
   container_build:
-    needs: [prepare_ci_run]
     strategy:
       matrix:
         component: [ "legs", "hats", "arms", "main" ]
