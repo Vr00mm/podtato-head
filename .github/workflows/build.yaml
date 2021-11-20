@@ -1,4 +1,4 @@
-name: builder-small
+name: builder
 
 on:
   push:
@@ -46,7 +46,7 @@ jobs:
         with:
           build-args: |
             VERSION=${{ matrix.version }}
-          context: podtato-services-small/${{ matrix.component }}/.
+          context: podtato-services/${{ matrix.component }}/.
           push: ${{ github.ref == 'refs/heads/main' || github.ref == 'refs/heads/release-*' }}
           file: podtato-services/${{ matrix.component }}/docker/Dockerfile
           platforms: linux/amd64
