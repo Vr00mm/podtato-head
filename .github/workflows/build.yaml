@@ -48,7 +48,7 @@ jobs:
             VERSION=${{ matrix.version }}
           context: podtato-services-small/${{ matrix.component }}/.
           push: ${{ github.ref == 'refs/heads/main' || github.ref == 'refs/heads/release-*' }}
-          file: podtato-services-small/${{ matrix.component }}/docker/Dockerfile
+          file: podtato-services/${{ matrix.component }}/docker/Dockerfile
           platforms: linux/amd64
           tags: |
             ${{ env.CONTAINER_REGISTRY }}/vr00mm/podtato-${{ matrix.component }}:${{ matrix.version}}-latest
