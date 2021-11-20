@@ -51,5 +51,5 @@ jobs:
           file: podtato-services-small/${{ matrix.component }}/docker/Dockerfile
           platforms: linux/amd64
           tags: |
-            ${{ env.CONTAINER_REGISTRY }}/podtato-head/podtato-small-${{ matrix.component }}:${{ matrix.version}}-latest-dev
-            ${{ env.CONTAINER_REGISTRY }}/podtato-head/podtato-small-${{ matrix.component }}:${{ matrix.version}}-${{ env.VERSION }}
+            ${{ env.CONTAINER_REGISTRY }}/vr00mm/podtato-${{ matrix.component }}:${{ matrix.version}}-latest
+            ${{ env.CONTAINER_REGISTRY }}/vr00mm/podtato-${{ matrix.component }}:${{ matrix.version}}-${{ env.VERSION }}
